@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+
+}
+
+.container{
+    width:100%;
+    height: 100vh;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+
+
+/*positioning*/
+
+justify-content:flex-start;
+align-items:flex-start;
+animation-name: moveBoxes;
+animation-duration: 18s;
+animation-iteration-count: infinite;
+}
+
+/*Boxes*/
+.box{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size:30px;
+    font-weight: bold;
+}
+
+/*different colors of boxes*/
+.box1{
+    background-color: red;
+}
+
+.box2{
+    background-color: blue;
+}
+
+.box3{
+    background-color: green;
+}
+
+.box4{
+    background-color: orange;
+}
+
+.box5{
+    background-color: purple;
+}
+
+.box6{
+    background-color: black;
+}
+
+/*Animation*/
+@keyframes moveBoxes {
+    /*1. top left*/
+    0%{
+        justify-content: flex-start;
+        align-items: flex-start;
+
+    }
+
+    /*2. top center*/
+    11%{
+        justify-content: center;
+        align-items: flex-start;
+        
+    }
+
+    /*3. top right*/
+    22%{
+        justify-content: flex-end;
+        align-items: flex-start;
+        
+    }
+
+/*4. middle-right*/
+    33%{
+        justify-content: flex-end;
+        align-items: center;
+        
+    }
+
+    /*5. center*/
+    44%{
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    /*6. middle-left*/
+    55%{
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+
+    /*7. bottom left*/
+    66%{
+        justify-content: flex-start;
+        align-items: flex-end;
+        
+    }
+
+    /*8. bottom-center*/
+    77%{
+        justify-content: center;
+        align-items: flex-end;
+        
+    }
+
+    /*9. bottom-right*/
+    88%{
+        justify-content: flex-end;
+        align-items: flex-end;
+        
+    }
+
+    /*10. return to top left*/
+    100%{
+        justify-content: flex-start;
+        align-items: flex-start;
+    
+    }
+
+    
+}
